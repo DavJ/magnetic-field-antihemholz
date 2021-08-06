@@ -39,7 +39,7 @@ class LoopField:
     def __init__(self, B0, loop_radius, axial_offset):
         self.B0 = B0
         self.loop_radius = loop_radius
-        self.axial_offset - axial_offset
+        self.axial_offset = axial_offset
 
     def vector(self, r=0, z=0):
         return (self.Br(r,z), self.Bz(r, z))
