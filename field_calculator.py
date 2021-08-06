@@ -15,7 +15,7 @@ class AntiHemholtz:
     def __init__(self, B0, loop_radius, axial_offset):
         self.B0 = B0
         self.loop_radius = loop_radius
-        self.axial_offset - axial_offset
+        self.axial_offset = axial_offset
         self.loop_clockwise = LoopField(B0, loop_radius, axial_offset)
         self.loop_anticlockwise = LoopField(-B0, loop_radius, -axial_offset)
 
