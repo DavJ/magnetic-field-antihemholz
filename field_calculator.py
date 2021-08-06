@@ -51,6 +51,7 @@ class LoopField:
         return z / self.loop_radius
 
     def gama(self, r, z):
+
         return z / r
 
     def q(self, r, z):
@@ -87,7 +88,7 @@ class LoopField:
         if r == 0:
             return 0  # no radial component on axis!
         else:  # radial component, any location other than axis.
-            return self.B0 * self.gama(z, r) * \
+            return self.B0 * self.gama(r, z) * \
                    (E(self.k(r, z)) * ((1.0 + self.alpha(r) ** 2 + self.beta(z) ** 2) / (self.q(r, z) - 4 * self.alpha(r))) - K(
                        self.k(r, z))) \
                    / pi / sqrt(self.q(r, z))
