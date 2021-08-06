@@ -11,7 +11,7 @@ steps_horizontal = 720
 
 generator = AntiHemholtz(1, generator_radius, generator_offset)
 
-theta0 = math.asin(generator_radius/generator_offset)
+theta0 = math.atan(generator_radius/generator_offset)
 r = generator_radius
 z = generator_offset
 dtheta = (math.pi/2 - theta0) / steps_vertical
