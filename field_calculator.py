@@ -23,7 +23,7 @@ class AntiHemholtz:
         return self.loop_clockwise.Bz(r, z) + self.loop_aniclockwise.Bz(r, z)
 
     def Br(self, r, z):
-        return self.loop_clockwise.Br(r, z) + self.loop_aniclockwise.Br(r, z)
+        return self.loop_clockwise.Br(r, z) + self.loop.anticlockwise.Br(r, z)
 
     def vector(self, r, z):
         return self.Br(r, z), self.Bz(r, z)
