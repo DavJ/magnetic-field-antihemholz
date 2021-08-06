@@ -32,11 +32,13 @@ for fi in np.linspace(0, 2*math.pi, steps_horizontal):
         vert2 = [r * math.cos(fi), r * math.sin(fi), z]
         #vert3 = [r1 * math.cos(fi + dfi), r1 * math.sin(fi + dfi), z1]
         #vert4 = [r * math.cos(fi + dfi), r * math.sin(fi + dfi), z]
-        vertices.append([vert1, vert2]) #, vert3, vert4])
+        vertices.append(vert1)
+        vertices.append(vert2) #, vert3, vert4])
 
         face1 = [i, i + 1, i + steps_vertical]
-        face2 = [i+1, i + 1 + steps_vertical, i + steps_vertical]
-        faces.append([face1, face2])
+        face2 = [i + 1, i + 1 + steps_vertical, i + steps_vertical]
+        faces.append(face1)
+        faces.append(face2)
 
 
 np_faces = np.array(faces)
