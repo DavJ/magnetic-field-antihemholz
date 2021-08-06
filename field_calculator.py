@@ -2,8 +2,12 @@ from scipy.special import ellipk, ellipe, ellipkm1
 from numpy import pi, sqrt, linspace, NaN
 from pylab import plot, xlabel, ylabel, suptitle, legend, show
 
-K = lambda k: ellipk(k ** 2.0)  # Elliptic integral, first kind, as a function of k
-E = lambda k: ellipe(k ** 2.0)  # Elliptic integral, second kind, as a function of k
+
+def K(k):
+    return ellipk(k ** 2.0)  # Elliptic integral, first kind, as a function of k
+
+def E(k):
+    return ellipe(k ** 2.0)  # Elliptic integral, second kind, as a function of k
 
 
 class AntiHemholtz:
@@ -21,6 +25,14 @@ class AntiHemholtz:
     def Br(self, r, z):
         return self.loop_clockwise.Br(r, z) + self.loop_aniclockwise.Br(r, z)
 
+    def vector(self, r, z):
+        return self.Br(r, z), self.Bz(r, z)
+
+    def normal_vector(self, r, z):
+        br, bz = self.vector(r, z)
+        norm = sqrt(br**2 + bz **2)
+        return bz / norm, -br / norm
+
 
 class LoopField:
 
@@ -29,8 +41,8 @@ class LoopField:
         self.loop_radius = loop_radius
         self.axial_offset - axial_offset
 
-    def cylindrical(self, r=0, fi=0, z=0):
-        return (self.Br(r,z), 0, self.Bz(r, z))
+    def vector(self, r=0, z=0):
+        return (self.Br(r,z), self.Bz(r, z))
 
     def alpha(self, r):
         return r / self.loop_radius
