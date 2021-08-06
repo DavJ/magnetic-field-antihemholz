@@ -20,7 +20,7 @@ class AntiHemholtz:
         self.loop_anticlockwise = LoopField(-B0, loop_radius, -axial_offset)
 
     def Bz(self, r, z):
-        return self.loop_clockwise.Bz(r, z) + self.loop_aniclockwise.Bz(r, z)
+        return self.loop_clockwise.Bz(r, z) + self.loop_anticlockwise.Bz(r, z)
 
     def Br(self, r, z):
         return self.loop_clockwise.Br(r, z) + self.loop_anticlockwise.Br(r, z)
