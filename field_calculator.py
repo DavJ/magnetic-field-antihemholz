@@ -31,7 +31,7 @@ class AntiHemholtz:
     def normal_vector(self, r, z):
         br, bz = self.vector(r, z)
         norm = sqrt(br**2 + bz **2)
-        return bz / norm, -br / norm
+        return -bz / norm, br / norm
 
 
 class LoopField:

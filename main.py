@@ -9,6 +9,7 @@ generator_offset = 0.5
 offset_offset = 0.025
 steps_vertical = 100
 steps_horizontal = 720
+number_of_vertices = steps_vertical * steps_horizontal
 
 
 generator = AntiHemholtz(1, generator_radius, generator_offset)
@@ -30,16 +31,14 @@ for fi in np.linspace(0, 2*math.pi, steps_horizontal):
 
         vert1 = [r1 * math.cos(fi), r1 * math.sin(fi), z1]
         vert2 = [r * math.cos(fi), r * math.sin(fi), z]
-        #vert3 = [r1 * math.cos(fi + dfi), r1 * math.sin(fi + dfi), z1]
-        #vert4 = [r * math.cos(fi + dfi), r * math.sin(fi + dfi), z]
         vertices.append(vert1)
-        vertices.append(vert2) #, vert3, vert4])
+        vert_index = len(vert1) - 1
 
-        face1 = [i, i + 1, i + steps_vertical]
-        face2 = [i + 1, i + 1 + steps_vertical, i + steps_vertical]
+        face1 = [vert_index, vert_index + 1, (vert_index + steps_vertical) % number_of_vertices]
+        face2 = [vert_index + 1, (vert_index + 1 + steps_vertical) % number_of_vertices, (vert_index + steps_vertical) % number_of_vertices]
         faces.append(face1)
         faces.append(face2)
-
+    vertices.append(vert2)
 
 np_faces = np.array(faces)
 np_vertices = np.array(vertices)
