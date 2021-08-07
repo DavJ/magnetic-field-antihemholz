@@ -7,8 +7,8 @@ generator_radius = 1
 offset_radius = 0.05
 generator_offset = 0.5
 offset_offset = 0.025
-steps_vertical = 100
-steps_horizontal = 720
+steps_vertical = 20
+steps_horizontal = 120
 number_of_vertices = steps_vertical * steps_horizontal
 
 
@@ -32,7 +32,7 @@ for fi in np.linspace(0, 2*math.pi, steps_horizontal):
         vert1 = [r1 * math.cos(fi), r1 * math.sin(fi), z1]
         vert2 = [r * math.cos(fi), r * math.sin(fi), z]
         vertices.append(vert1)
-        vert_index = len(vert1) - 1
+        vert_index = len(vertices) - 1
 
         face1 = [vert_index, vert_index + 1, (vert_index + steps_vertical) % number_of_vertices]
         face2 = [vert_index + 1, (vert_index + 1 + steps_vertical) % number_of_vertices, (vert_index + steps_vertical) % number_of_vertices]
