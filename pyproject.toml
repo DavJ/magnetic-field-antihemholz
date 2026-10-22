@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "magnetic-field-antihemholz"
+version = "0.1.0"
+description = "Circular-loop and anti-Helmholtz magnetic fields with STL surface generation"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "numpy-stl>=3.1",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[project.scripts]
+antihemholtz-stl = "main:main"
+
+[tool.setuptools]
+py-modules = ["field_calculator", "main"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+filterwarnings = ["error"]
