@@ -198,6 +198,11 @@ could change these frequencies substantially.
 
 ## 5. A measurable low-frequency reference
 
+The [driven transfer model](toroid-transfer.md) extends this prescribed-current
+reference to a finite-impedance source and loaded pickup, including ordinary
+capacitive feedthrough and opposed-pair controls. It remains separate from
+the empty-cavity eigenproblem above.
+
 For a separate quasistatic reference, an ideal continuously wound rectangular
 toroidal solenoid gives, by Ampere's law,
 

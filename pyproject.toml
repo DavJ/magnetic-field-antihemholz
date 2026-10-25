@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "magnetic-field-antihemholz"
 version = "0.1.0"
-description = "Loop fields, toroidal vector potentials and axisymmetric Maxwell cavity modes"
+description = "Loop fields, toroidal vector potentials, cavity modes and loaded pickup transfer"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
@@ -22,9 +22,10 @@ report = ["matplotlib>=3.7"]
 antihemholtz-stl = "main:main"
 antihemholtz-potential = "toroidal_potential:main"
 antihemholtz-cavity = "cavity_modes:main"
+antihemholtz-transfer = "toroid_transfer:main"
 
 [tool.setuptools]
-py-modules = ["field_calculator", "main", "toroidal_potential", "cavity_profile", "cavity_modes"]
+py-modules = ["field_calculator", "main", "toroidal_potential", "cavity_profile", "cavity_modes", "toroid_transfer"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

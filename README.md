@@ -32,6 +32,21 @@ antihemholtz-cavity --profile cylinder --outer-radius 0.1
 python scripts/cavity_audit.py
 ```
 
+The [driven toroid/pickup baseline](docs/toroid-transfer.md) now predicts
+loaded pickup voltage from a Thevenin generator, using the finite rectangular
+cross-section flux integral and a passive coupled-coil circuit. It includes
+winding resistances, source and probe impedance, backreaction and an explicit
+capacitive feedthrough. Opposed-pair, known-mismatch and polarity controls
+show ordinary signals that can survive a magnetic null. Component values
+are assumed examples; actual discrete windings/lead fields and hardware
+measurements remain to be supplied.
+
+```sh
+python -m toroid_transfer
+antihemholtz-transfer --scenario mismatched-pair
+python scripts/transfer_audit.py --plot  # requires .[report]
+```
+
 ## Install and run
 
 Use Python 3.10 or newer:
