@@ -1,0 +1,446 @@
+{
+  "status": "numerical Maxwell baseline; not experimental validation or a physical scalar source",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "historical_source": "https://github.com/DavJ/research/blob/9f4e22c83aabe5a8e54ff47c52e58c46b6986de3/A-field-cavity/num-sol.wxm",
+  "geometry": {
+    "coil_radius_m": 0.1,
+    "axis_half_height_m": 0.1,
+    "closing_wall_radius_m": 0.09,
+    "construction": "mirror the positive integral profile about z=0 and close at r=0.09 m; empty PEC cavity",
+    "source_placement": "reference flux ring is outside the closing wall; eigenproblem includes no actual source or port"
+  },
+  "profile_samples": {
+    "r_m": [
+      0.0,
+      0.025,
+      0.05,
+      0.07500000000000001,
+      0.09000000000000001
+    ],
+    "historical_literal_half_height_m": [
+      0.1,
+      0.08955779862071828,
+      0.08086816351648567,
+      0.06684749004838832,
+      0.05333443240341697
+    ],
+    "corrected_half_height_m": [
+      0.1,
+      0.09762566835137296,
+      0.09008955653924566,
+      0.07563545254842668,
+      0.06124685196321105
+    ]
+  },
+  "cylinder_analytic_modes": [
+    {
+      "mode": "TM_0,1,0",
+      "frequency_hz": 1147425278.3521001
+    },
+    {
+      "mode": "TM_0,1,1",
+      "frequency_hz": 1370513318.4730113
+    },
+    {
+      "mode": "TM_0,1,2",
+      "frequency_hz": 1887716270.0584638
+    },
+    {
+      "mode": "TM_0,1,3",
+      "frequency_hz": 2524298447.0533576
+    },
+    {
+      "mode": "TM_0,2,0",
+      "frequency_hz": 2633819797.0124393
+    },
+    {
+      "mode": "TM_0,2,1",
+      "frequency_hz": 2738380672.924267
+    }
+  ],
+  "cylinder_convergence": [
+    {
+      "radial_cells": 8,
+      "axial_cells": 16,
+      "frequencies_hz": [
+        1147500556.5416026,
+        1371235393.004607,
+        1895433032.3356261,
+        2553441134.2505336,
+        2667880709.78764,
+        2771482718.2254267
+      ],
+      "max_algebraic_relative_residual": 4.8627891167289074e-15,
+      "electric_magnetic_energy_ratios": [
+        0.9999999999999983,
+        1.0000000000000002,
+        0.999999999999999,
+        1.0000000000000002,
+        0.9999999999999988,
+        1.0
+      ],
+      "relative_frequency_errors": [
+        6.560618013451425e-05,
+        0.0005268642937379386,
+        0.004087882485074523,
+        0.011544865953229344,
+        0.012932134846065146,
+        0.01208818248991328
+      ]
+    },
+    {
+      "radial_cells": 16,
+      "axial_cells": 32,
+      "frequencies_hz": [
+        1147444701.3705416,
+        1370694219.7166028,
+        1889641565.4203231,
+        2531556181.002957,
+        2642354067.9916043,
+        2746672226.8761806
+      ],
+      "max_algebraic_relative_residual": 2.017234414196163e-14,
+      "electric_magnetic_energy_ratios": [
+        0.9999999999999996,
+        1.0,
+        0.9999999999999999,
+        1.0000000000000002,
+        1.0000000000000002,
+        1.000000000000001
+      ],
+      "relative_frequency_errors": [
+        1.6927479991935e-05,
+        0.0001319952467102592,
+        0.0010199071716427976,
+        0.0028751489183347356,
+        0.0032402638133579575,
+        0.0030279040580063477
+      ]
+    },
+    {
+      "radial_cells": 32,
+      "axial_cells": 64,
+      "frequencies_hz": [
+        1147430173.8889728,
+        1370558569.3993943,
+        1888197343.763512,
+        2526110975.661997,
+        2635954697.7644005,
+        2740454698.926702
+      ],
+      "max_algebraic_relative_residual": 7.721611105436992e-14,
+      "electric_magnetic_energy_ratios": [
+        0.9999999999999991,
+        0.9999999999999963,
+        1.0000000000000004,
+        0.9999999999999998,
+        1.0000000000000036,
+        1.000000000000002
+      ],
+      "relative_frequency_errors": [
+        4.2665408936937155e-06,
+        3.301750210904508e-05,
+        0.00025484428601818543,
+        0.000718032612488928,
+        0.0008105720650983805,
+        0.0007573914112606328
+      ]
+    },
+    {
+      "radial_cells": 64,
+      "axial_cells": 128,
+      "frequencies_hz": [
+        1147426504.7644184,
+        1370524632.8400862,
+        1887836522.755302,
+        2524751457.785846,
+        2634353608.943042,
+        2738899253.7763805
+      ],
+      "max_algebraic_relative_residual": 3.254089876195695e-13,
+      "electric_magnetic_energy_ratios": [
+        0.9999999999999887,
+        1.0000000000000084,
+        1.0,
+        0.9999999999999986,
+        1.0000000000000133,
+        1.0000000000000027
+      ],
+      "relative_frequency_errors": [
+        1.068838504147962e-06,
+        8.255568860526807e-06,
+        6.370273898959056e-05,
+        0.0001794600527593726,
+        0.00020267595042300357,
+        0.00018937500444748956
+      ]
+    }
+  ],
+  "sphere_analytic_fundamental": {
+    "radius_m": 0.1,
+    "ka": 2.743707269992269,
+    "frequency_hz": 1309117440.1040819
+  },
+  "sphere_domain_and_mesh_convergence": [
+    {
+      "radial_cells": 16,
+      "axial_cells": 32,
+      "frequencies_hz": [
+        1316618193.0360415
+      ],
+      "max_algebraic_relative_residual": 3.474332697435092e-13,
+      "electric_magnetic_energy_ratios": [
+        0.9999999999999986
+      ],
+      "equatorial_truncation_over_radius": 0.0009765625,
+      "relative_frequency_error_to_full_sphere": 0.00572962570215485
+    },
+    {
+      "radial_cells": 32,
+      "axial_cells": 64,
+      "frequencies_hz": [
+        1312251837.0665689
+      ],
+      "max_algebraic_relative_residual": 5.150153211182526e-12,
+      "electric_magnetic_energy_ratios": [
+        0.99999999999998
+      ],
+      "equatorial_truncation_over_radius": 0.000244140625,
+      "relative_frequency_error_to_full_sphere": 0.0023942824886953318
+    },
+    {
+      "radial_cells": 64,
+      "axial_cells": 128,
+      "frequencies_hz": [
+        1310355869.449471
+      ],
+      "max_algebraic_relative_residual": 4.0791455866258094e-11,
+      "electric_magnetic_energy_ratios": [
+        0.9999999999993737
+      ],
+      "equatorial_truncation_over_radius": 6.103515625e-05,
+      "relative_frequency_error_to_full_sphere": 0.0009460032442090149
+    },
+    {
+      "radial_cells": 128,
+      "axial_cells": 256,
+      "frequencies_hz": [
+        1309589174.4565191
+      ],
+      "max_algebraic_relative_residual": 2.1126508869791727e-10,
+      "electric_magnetic_energy_ratios": [
+        0.9999999999986026
+      ],
+      "equatorial_truncation_over_radius": 1.52587890625e-05,
+      "relative_frequency_error_to_full_sphere": 0.0003603453273066659
+    }
+  ],
+  "profile_convergence": {
+    "historical_literal": [
+      {
+        "radial_cells": 12,
+        "axial_cells": 24,
+        "frequencies_hz": [
+          1361385859.78955,
+          1801578607.5674858,
+          2516927023.270558,
+          3017945304.338726
+        ],
+        "max_algebraic_relative_residual": 1.3981595757842826e-14,
+        "electric_magnetic_energy_ratios": [
+          0.9999999999999994,
+          1.0000000000000009,
+          0.999999999999999,
+          0.9999999999999991
+        ]
+      },
+      {
+        "radial_cells": 24,
+        "axial_cells": 48,
+        "frequencies_hz": [
+          1360960544.4782064,
+          1799716838.7310598,
+          2510296511.087272,
+          3005870278.9199533
+        ],
+        "max_algebraic_relative_residual": 6.219874971025463e-14,
+        "electric_magnetic_energy_ratios": [
+          1.0000000000000029,
+          0.9999999999999999,
+          0.9999999999999999,
+          0.9999999999999987
+        ],
+        "relative_change_from_previous_mesh": [
+          -0.000312413492681185,
+          -0.0010334097155715316,
+          -0.0026343680694682625,
+          -0.004001074970249818
+        ]
+      },
+      {
+        "radial_cells": 48,
+        "axial_cells": 96,
+        "frequencies_hz": [
+          1360853768.8009493,
+          1799254230.083344,
+          2508641734.635571,
+          3002825734.8126354
+        ],
+        "max_algebraic_relative_residual": 2.572086623048065e-13,
+        "electric_magnetic_energy_ratios": [
+          1.0000000000000009,
+          0.9999999999999969,
+          1.0000000000000053,
+          1.0000000000000002
+        ],
+        "relative_change_from_previous_mesh": [
+          -7.845611519763374e-05,
+          -0.00025704524054015465,
+          -0.0006591956146982936,
+          -0.0010128661002669626
+        ]
+      },
+      {
+        "radial_cells": 96,
+        "axial_cells": 192,
+        "frequencies_hz": [
+          1360826958.235229,
+          1799138739.1809494,
+          2508226782.373318,
+          3002062503.9603066
+        ],
+        "max_algebraic_relative_residual": 1.046205064488388e-12,
+        "electric_magnetic_energy_ratios": [
+          1.0000000000000084,
+          1.0000000000000009,
+          1.0000000000000013,
+          1.0000000000000093
+        ],
+        "relative_change_from_previous_mesh": [
+          -1.970128336703514e-05,
+          -6.418820668230296e-05,
+          -0.00016540913615670227,
+          -0.0002541708776104823
+        ]
+      }
+    ],
+    "corrected": [
+      {
+        "radial_cells": 12,
+        "axial_cells": 24,
+        "frequencies_hz": [
+          1349968885.4995432,
+          1716293560.9508557,
+          2341075321.8728213,
+          2912248230.2323923
+        ],
+        "max_algebraic_relative_residual": 1.2522787535646736e-14,
+        "electric_magnetic_energy_ratios": [
+          0.9999999999999994,
+          1.0,
+          1.0,
+          1.0000000000000007
+        ]
+      },
+      {
+        "radial_cells": 24,
+        "axial_cells": 48,
+        "frequencies_hz": [
+          1349628471.9214733,
+          1714733906.7868674,
+          2335459370.5559683,
+          2898661350.3583603
+        ],
+        "max_algebraic_relative_residual": 5.616416912537444e-14,
+        "electric_magnetic_energy_ratios": [
+          1.0,
+          0.9999999999999987,
+          1.000000000000002,
+          1.0
+        ],
+        "relative_change_from_previous_mesh": [
+          -0.00025216401779804,
+          -0.0009087339132848316,
+          -0.0023988768171544494,
+          -0.004665426433428599
+        ]
+      },
+      {
+        "radial_cells": 48,
+        "axial_cells": 96,
+        "frequencies_hz": [
+          1349541330.8969984,
+          1714342224.9443996,
+          2334050218.782206,
+          2895231008.3314886
+        ],
+        "max_algebraic_relative_residual": 2.3957820684456005e-13,
+        "electric_magnetic_energy_ratios": [
+          0.9999999999999987,
+          0.9999999999999952,
+          1.0000000000000018,
+          1.000000000000001
+        ],
+        "relative_change_from_previous_mesh": [
+          -6.45666761540653e-05,
+          -0.0002284213550087788,
+          -0.0006033724206586655,
+          -0.0011834228329044016
+        ]
+      },
+      {
+        "radial_cells": 96,
+        "axial_cells": 192,
+        "frequencies_hz": [
+          1349519302.2624567,
+          1714244158.5926971,
+          2333696377.462907,
+          2894368656.248489
+        ],
+        "max_algebraic_relative_residual": 9.48849760823717e-13,
+        "electric_magnetic_energy_ratios": [
+          0.99999999999998,
+          1.0,
+          0.9999999999999991,
+          1.0000000000000007
+        ],
+        "relative_change_from_previous_mesh": [
+          -1.632305290499847e-05,
+          -5.720348613924564e-05,
+          -0.00015159970271927392,
+          -0.000297852599850601
+        ]
+      }
+    ]
+  },
+  "quadrature_check_relative_frequency_change_3_to_5": [
+    4.689360011411736e-12,
+    1.4052092822680606e-11,
+    3.0416780205655414e-11,
+    8.14097678158987e-11
+  ],
+  "open_integral_gauge_control": {
+    "chi_over_flux": "0.2*(r/R)^2*(z/R)*exp(-((r/R)^2+(z/R)^2)/2)",
+    "r_over_R": 0.9,
+    "target_over_flux": 0.3535533905932738,
+    "original_Z_over_R": 0.6124685196321105,
+    "gauge_shifted_Z_over_R": 0.4105238556585816,
+    "physical_E_B_change": "zero; static smooth gauge, no hardware change"
+  },
+  "ordinary_induction_reference": {
+    "assumptions": "air/vacuum core, ideal continuous toroidal winding; quasistatic; ignores leads and leakage",
+    "inner_radius_m": 0.09,
+    "outer_radius_m": 0.11,
+    "axial_height_m": 0.01,
+    "drive_turns": 100,
+    "current_peak_A": 0.1,
+    "frequency_hz": 10000,
+    "pickup_turns_linking_one_core": 1,
+    "core_flux_peak_Wb": 4.013413908713123e-09,
+    "pickup_emf_peak_V": 0.0002521702330285649
+  }
+}
