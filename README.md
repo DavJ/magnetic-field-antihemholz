@@ -47,6 +47,17 @@ antihemholtz-transfer --scenario mismatched-pair
 python scripts/transfer_audit.py --plot  # requires .[report]
 ```
 
+The [scalar source/detector gate](docs/scalar-source-gate.md) derives a zero
+additional G-voltage prediction for a complete conserved source, ordinary
+detector and retarded zero-scalar data in the specified frameworks. Numerical
+controls show how omitted endpoint charge or an omitted scalar-potential
+coupling can create a false effect. The audit pins the inspected UBT sources;
+it does not add a scalar term or claim a finalized UBT action.
+
+```sh
+python scripts/scalar_source_audit.py
+```
+
 ## Install and run
 
 Use Python 3.10 or newer:

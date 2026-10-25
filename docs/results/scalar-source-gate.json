@@ -1,0 +1,131 @@
+{
+  "status": "conditional analytic source/detector result with finite numerical controls; not a new UBT action or measured data",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "numerical_units": "dimensionless c=mu0=epsilon0=1; probe integrals per unit transverse area, not SI voltages",
+  "retarded_path_sample": {
+    "time": 1.1,
+    "position": [
+      0.3,
+      -0.2,
+      0.4
+    ],
+    "cases": {
+      "closed_current_path": {
+        "E": [
+          0.06795759031439387,
+          0.1118824657082284,
+          0.005040434749629518
+        ],
+        "B": [
+          0.018799785119180748,
+          -0.017380943653503265,
+          0.35790477511705304
+        ],
+        "div_A": -1.2568288423886464e-14,
+        "phi_t": 0.0,
+        "G": -1.2568288423886464e-14
+      },
+      "open_path_with_endpoint_charge": {
+        "E": [
+          0.2916887636822696,
+          0.09977249075531919,
+          -0.07394924104506855
+        ],
+        "B": [
+          -0.020580745139719317,
+          0.03822176675060557,
+          0.1887772291191923
+        ],
+        "div_A": 0.035421762187110774,
+        "phi_t": -0.035421762187049184,
+        "G": 6.158962229108056e-14
+      },
+      "incomplete_open_path_without_charge": {
+        "E": [
+          0.02954965226728325,
+          0.05800497920532659,
+          0.009585782055864979
+        ],
+        "B": [
+          -0.020580745139719317,
+          0.03822176675060557,
+          0.1887772291191923
+        ],
+        "div_A": 0.035421762187110774,
+        "phi_t": 0.0,
+        "G": 0.035421762187110774
+      }
+    },
+    "exact_open_path_boundary_div_A": 0.035421762187072846
+  },
+  "time_dependent_maxwell_gauge_control": {
+    "E": [
+      1.7114087924596788e-13,
+      -1.757760603737779e-13,
+      2.3128721160503574e-13
+    ],
+    "B": [
+      4.394401509344448e-14,
+      3.007316617953393e-14,
+      1.156713613781335e-14
+    ],
+    "div_A": -1.9910921927746803,
+    "phi_t": 1.0098197454867879,
+    "G": -0.9812724472878924,
+    "analytic_G": -0.9812724472882476
+  },
+  "conserved_probe_gauge_control": {
+    "rho_chi_t_integral": 0.3067163099930102,
+    "J_chi_x_integral": -0.30671630999301014,
+    "complete_interaction_change": 5.551115123125783e-17,
+    "whole_space_exact_scalar_part": 0.30671630999301014,
+    "whole_space_exact_vector_part": -0.30671630999301014,
+    "omitting_scalar_potential_gives_false_change": -0.30671630999301014
+  },
+  "probe_quadrature_control_order_64": {
+    "rho_chi_t_integral": 0.306716309988105,
+    "J_chi_x_integral": -0.3067163099966058,
+    "complete_interaction_change": -8.50081116610113e-12,
+    "whole_space_exact_scalar_part": 0.30671630999301014,
+    "whole_space_exact_vector_part": -0.30671630999301014,
+    "omitting_scalar_potential_gives_false_change": -0.3067163099966058
+  },
+  "conditional_prediction": {
+    "extra_scalar_voltage_v": 0,
+    "assumptions": [
+      "complete locally conserved source current, including feeds and surface/endpoint charges",
+      "retarded solution, zero initial scalar data and no incoming scalar wave",
+      "ordinary conserved detector, no additional theory-derived coupling"
+    ],
+    "frameworks": "Maxwell has no independent local G observable; the specified lambda=1 extended AB model also has no forced G here",
+    "not_claimed": "No universal no-go for all UBT scalar completions, no full composite-UBT gauge reduction, no removal of homogeneous scalar solutions, no rejection of Aharonov-Bohm holonomy"
+  },
+  "source_snapshots": [
+    {
+      "repository": "UBT-Institute/unified-biquaternion-theory",
+      "commit": "fc4c6834b9f052a21a4054418024764ac046fa6e",
+      "path": "canonical/ACTION.en.md",
+      "blob_sha": "5a063201f4a13f4f5cf37c77d6729b52ae4ca1a0",
+      "used_for": "fundamental action remains DEFINED_FAMILY_NOT_FINALIZED"
+    },
+    {
+      "repository": "UBT-Institute/unified-biquaternion-theory",
+      "commit": "fc4c6834b9f052a21a4054418024764ac046fa6e",
+      "path": "canonical/interactions/qed.tex",
+      "blob_sha": "dc8683c29ca8f530b974a78eae31125bfc185230",
+      "used_for": "declared effective local U(1) symmetry and conserved current only; not endorsement of the entire file"
+    },
+    {
+      "repository": "DavJ/research",
+      "commit": "49e78d7a389ee7d3e502a9f036b02dc7a67b8e6b",
+      "path": "audits/scalar_g/README.md",
+      "blob_sha": "1f018e262f54cf66305880ee82c77e211f09769e",
+      "used_for": "existing restricted scalar-energy audit; not rerun or replaced here"
+    }
+  ],
+  "verification_scope": "The continuum Green-function, integration-by-parts and Noether arguments are written analytically in the companion document. Finite tests do not prove those general statements. No Lean formalization is claimed."
+}
