@@ -1,8 +1,21 @@
-# Anti-Helmholtz magnetic field and STL surface
+# Anti-Helmholtz fields and toroidal vector potential
 
 Calculate the cylindrical field `(Br, Bz)` of an ideal circular current loop
 or a pair of opposite-current loops. The example traces a profile perpendicular
 to the field in the `(r, z)` plane and revolves it into `ufo.stl`.
+
+The original research goal is an analogous **vector potential A from opposed
+toroids**, followed by investigation of a proposed source of `div(A)`. A new
+thin-flux-ring model now computes this analogue in Coulomb gauge, with tests
+of divergence, curl, and linked-loop circulation. In standard Maxwell theory,
+`div(A)` is gauge-dependent; the calculation does not establish an additional
+physical source. See the [derivation, gauge control, and next steps](docs/toroidal-potential.md).
+
+```sh
+python -m toroidal_potential
+# After installation:
+antihemholtz-potential --flux 1e-6 --radius 0.1 --offset 0.05
+```
 
 ## Install and run
 

@@ -19,9 +19,10 @@ test = ["pytest>=7"]
 
 [project.scripts]
 antihemholtz-stl = "main:main"
+antihemholtz-potential = "toroidal_potential:main"
 
 [tool.setuptools]
-py-modules = ["field_calculator", "main"]
+py-modules = ["field_calculator", "main", "toroidal_potential"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
