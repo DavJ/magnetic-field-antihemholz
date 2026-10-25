@@ -25,7 +25,7 @@ antihemholtz-cavity = "cavity_modes:main"
 antihemholtz-transfer = "toroid_transfer:main"
 
 [tool.setuptools]
-py-modules = ["field_calculator", "main", "toroidal_potential", "cavity_profile", "cavity_modes", "toroid_transfer", "scalar_gate"]
+py-modules = ["field_calculator", "main", "toroidal_potential", "cavity_profile", "cavity_modes", "toroid_transfer", "scalar_gate", "gravity_gate"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

@@ -26,3 +26,4 @@ jobs:
       - run: antihemholtz-potential
       - run: antihemholtz-cavity --radial-cells 12 --axial-cells 24
       - run: antihemholtz-transfer --scenario balanced-pair
+      - run: python scripts/gravity_audit.py
