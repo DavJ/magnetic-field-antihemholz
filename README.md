@@ -17,6 +17,21 @@ python -m toroidal_potential
 antihemholtz-potential --flux 1e-6 --radius 0.1 --offset 0.05
 ```
 
+The [cavity audit](docs/cavity-audit.md) reconstructs the separate 2016 wxMaxima
+profile, fixes its elliptic modulus/parameter mismatch, and computes actual
+Maxwell eigenmodes for an explicitly closed comparison geometry. The new
+axisymmetric TM solver is checked against a cylinder's analytic Bessel
+spectrum and mesh refinement. It does not include a toroidal source, feed
+ports, material loading or losses. Its frequencies do not establish a physical
+`div(A)` source.
+
+```sh
+python -m cavity_modes
+antihemholtz-cavity --profile cylinder --outer-radius 0.1
+# Rebuild the committed numerical audit; add --plot after installing .[report]:
+python scripts/cavity_audit.py
+```
+
 ## Install and run
 
 Use Python 3.10 or newer:

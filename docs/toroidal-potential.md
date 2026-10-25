@@ -138,6 +138,12 @@ cores. Small numerical residuals are derivative error, not new sources.
 
 ## 5. What remains before a build
 
+The [cavity audit](cavity-audit.md) now supplies a separate, gauge-independent
+Maxwell eigenmode calculation for one explicitly closed reference geometry,
+with an analytic cylinder control and mesh convergence. It also corrects an
+elliptic-parameter error in the old wxMaxima profile. The closed cavity is
+empty; its source coupling, loading and losses still need a model.
+
 1. Specify an observable: for example an induced voltage on a defined
    pickup loop, a field measurement, or a predicted force on a specified
    probe. A number for div(A) without a gauge and observable is insufficient.
