@@ -58,6 +58,24 @@ it does not add a scalar term or claim a finalized UBT action.
 python scripts/scalar_source_audit.py
 ```
 
+## Finite-core A and UBT wave matching
+
+The [finite-core extension and UBT bridge](docs/ubt-wave-bridge.md) integrates
+Coulomb-gauge A over the existing rectangular toroidal core. It checks the
+current-to-flux normalization, linked circulation, quadrature refinement and
+traceless central A-gradient. This is an external magnetostatic calculation;
+internal core points are explicitly rejected.
+
+The same note develops conditional harmonic/polarity tests for an action-derived
+physical Theta mode coupled through F². Such a mode and its coupling remain
+undetermined. Ordinary magnetic-energy harmonics are computed as controls;
+they are not predicted extra voltages. The existing conserved-source G null
+result remains unchanged under its stated assumptions.
+
+```sh
+python scripts/finite_core_audit.py --check
+```
+
 ## Install and run
 
 Use Python 3.10 or newer:
@@ -125,3 +143,4 @@ or end caps and is not a watertight printable solid. The trace is a numerical
 approximation to a curve perpendicular to the field, not a magnetic field
 line; increase `--steps-vertical` to reduce Euler integration error. Changing
 the horizontal resolution refines only the angular tessellation.
+
