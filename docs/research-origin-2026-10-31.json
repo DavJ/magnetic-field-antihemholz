@@ -1,0 +1,43 @@
+{
+  "schema": "research-origin-summary/v1",
+  "decision_id": "UBT-HYPERSPACE-TOROID-BRIDGE-2026-10-31",
+  "date_recorded": "2026-10-31",
+  "status": "AI_ASSISTED_WORKING_RESEARCH",
+  "human_direction": {
+    "contribution": "Requested development of the hyperspace-wave proposal in relation to UBT and the anti-Helmholtz analogue for A, identifying both repositories.",
+    "evidence": "Current task instruction; no private conversation transcript published.",
+    "attestation": "not_requested_not_claimed"
+  },
+  "historical_origin": {
+    "status": "undetermined_from_this_task",
+    "evidence": [
+      "Original repository Git histories and existing author notices"
+    ],
+    "limits": "File authorship alone does not prove conceptual priority. No backdated origin or exclusive attribution is inferred."
+  },
+  "new_implementation": {
+    "contribution": "AI-proposed algebra corrections, conditional constrained-mode comparator, finite-core quadrature, source/detector matching target, tests and revised claim ledger.",
+    "historical_prior_steps": "not_reconstructed",
+    "human_substantive_review": "not_claimed"
+  },
+  "negative_results": [
+    "Stated sqrt(2) mass-shell argument omits a nonzero imaginary equation.",
+    "Bare div(A) and an A-gradient do not supply a new physical scalar source.",
+    "Fixed-coefficient periodic theta sums do not globally reconstruct a decaying half-line exponential."
+  ],
+  "verification": {
+    "methods": [
+      "independent matrix algorithms",
+      "exact CAS identities in companion wave repository",
+      "adaptive quadrature and linked holonomy in companion A repository",
+      "numerical regression tests"
+    ],
+    "limits": "Not experimental validation, a full UBT derivation or a verified historical-priority claim.",
+    "lean_status": "LEAN-PENDING"
+  },
+  "uncertainty": [
+    "Final action, reduced physical mode count and mixed source/detector couplings remain open.",
+    "Historical concept attribution beyond existing primary evidence is undetermined."
+  ],
+  "human_signature": null
+}
