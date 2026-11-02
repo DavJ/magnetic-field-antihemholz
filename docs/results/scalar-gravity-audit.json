@@ -1,0 +1,308 @@
+{
+  "status": "Analytical Maxwell gauge obstruction with finite controls; UBT scalar-gravity coupling is not yet derived; no experimental data.",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1"
+  },
+  "constants_used_si": {
+    "c_m_s": 299792458.0,
+    "newton_G_m3_kg_s2": 6.6743e-11,
+    "mu0_N_A2": 1.25663706127e-06,
+    "newton_G_standard_uncertainty": 1.5e-15
+  },
+  "curved_gauge_control": {
+    "units": "dimensionless c=mu0=1; signature (-,+,+,+); A_mu=(-phi,A)",
+    "background": "de Sitter flat slicing, a(t)=exp(H*t); prescribed background, not a backreaction solve",
+    "coordinates": [
+      0.7,
+      0.3,
+      -0.2,
+      0.4
+    ],
+    "H": 0.4,
+    "background_R": 1.9200000000000004,
+    "chi": "t^2+(x^2+y^2+z^2)/2, local gauge function",
+    "analytic_G": -1.9663728084535554,
+    "pure_gauge": {
+      "G": -1.9663728084528147,
+      "field_cov": [
+        [
+          0.0,
+          5.088522196198634e-14,
+          3.2381504884900395e-14,
+          4.625929269271485e-14
+        ],
+        [
+          -5.088522196198634e-14,
+          0.0,
+          -1.850371707708594e-14,
+          -4.625929269271486e-15
+        ],
+        [
+          -3.2381504884900395e-14,
+          1.850371707708594e-14,
+          0.0,
+          1.3877787807814457e-14
+        ],
+        [
+          -4.625929269271485e-14,
+          4.625929269271486e-15,
+          -1.3877787807814457e-14,
+          0.0
+        ]
+      ],
+      "stress_energy_cov": [
+        [
+          1.7409306980496312e-27,
+          -4.644903149081073e-28,
+          9.045337711368404e-28,
+          -1.2223429339687029e-28
+        ],
+        [
+          -4.644903149081073e-28,
+          3.4848281981898455e-28,
+          -1.6844103515503628e-27,
+          -2.2072332243970434e-27
+        ],
+        [
+          9.045337711368404e-28,
+          -1.6844103515503624e-27,
+          1.9870142100462695e-27,
+          -1.449051794942435e-27
+        ],
+        [
+          -1.2223429339687026e-28,
+          -2.2072332243970434e-27,
+          -1.449051794942435e-27,
+          7.123024681315306e-28
+        ]
+      ]
+    },
+    "step_refinement_absolute_errors": {
+      "0.02": 1.2918335667855274e-07,
+      "0.01": 8.07340527764211e-09,
+      "0.005": 5.04577490900715e-10
+    },
+    "nonzero_maxwell_field_before": {
+      "G": 9.985311730915465e-16,
+      "field_cov": [
+        [
+          0.0,
+          0.0,
+          4.625929269271485e-15,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.1999999999999973,
+          0.0
+        ],
+        [
+          -4.625929269271485e-15,
+          -1.1999999999999973,
+          0.0,
+          -4.625929269271485e-15
+        ],
+        [
+          0.0,
+          0.0,
+          4.625929269271485e-15,
+          0.0
+        ]
+      ],
+      "stress_energy_cov": [
+        [
+          0.23492145212858734,
+          3.17084727279767e-15,
+          0.0,
+          1.2223429339687033e-29
+        ],
+        [
+          3.1708472727976695e-15,
+          0.4112705259711449,
+          0.0,
+          3.1708472727976695e-15
+        ],
+        [
+          0.0,
+          0.0,
+          0.4112705259711449,
+          0.0
+        ],
+        [
+          1.2223429339687033e-29,
+          3.17084727279767e-15,
+          0.0,
+          -0.4112705259711448
+        ]
+      ]
+    },
+    "same_field_after_gauge": {
+      "G": -1.9663728084528218,
+      "field_cov": [
+        [
+          0.0,
+          4.163336342344337e-14,
+          3.700743415417188e-14,
+          4.625929269271485e-14
+        ],
+        [
+          -4.163336342344337e-14,
+          0.0,
+          1.1999999999999926,
+          4.625929269271485e-15
+        ],
+        [
+          -3.700743415417188e-14,
+          -1.1999999999999926,
+          0.0,
+          9.25185853854297e-15
+        ],
+        [
+          -4.625929269271485e-14,
+          -4.625929269271485e-15,
+          -9.25185853854297e-15,
+          0.0
+        ]
+      ],
+      "stress_energy_cov": [
+        [
+          0.23492145212858553,
+          2.536677818238138e-14,
+          -2.853762545517867e-14,
+          -3.0558573349217584e-28
+        ],
+        [
+          2.536677818238138e-14,
+          0.4112705259711417,
+          -1.5162970968304146e-27,
+          -6.341694545597241e-15
+        ],
+        [
+          -2.853762545517867e-14,
+          -1.5162970968304146e-27,
+          0.4112705259711417,
+          3.1708472727959454e-15
+        ],
+        [
+          -3.0558573349217584e-28,
+          -6.341694545597241e-15,
+          3.1708472727959454e-15,
+          -0.4112705259711416
+        ]
+      ]
+    },
+    "max_abs_stress_change": 2.853762545517867e-14
+  },
+  "toroid_energy_comparison_si": {
+    "geometry": {
+      "inner_radius_m": 0.09,
+      "outer_radius_m": 0.11,
+      "axial_height_m": 0.01,
+      "drive_turns": 100,
+      "relative_permeability": 1.0
+    },
+    "primary_inductance_h": 4.0134139087131226e-06,
+    "dc_current_a": 1,
+    "dc_magnetic_energy_j": 2.0067069543565613e-06,
+    "dc_independent_field_volume_integral_j": 2.0067069543565613e-06,
+    "dc_energy_equivalent_scales": {
+      "energy_j": 2.0067069543565613e-06,
+      "energy_mass_equivalent_kg": 2.232762605248014e-23,
+      "reference_distance_m": 1.0,
+      "point_mass_acceleration_scale_m_s2": 1.490212745620682e-33
+    },
+    "loaded_ac_example": {
+      "frequency_hz": 10000,
+      "source_peak_v": 1,
+      "pickup_turns": 10,
+      "circuit_parameters": {
+        "primary_inductance_h": 4.0134139087131226e-06,
+        "pickup_inductance_h": 1e-05,
+        "mutual_inductance_h": 4.013413908713122e-07,
+        "primary_resistance_ohm": 0.55,
+        "pickup_resistance_ohm": 0.2,
+        "source_resistance_ohm": 50.0,
+        "load_resistance_ohm": 1000000.0,
+        "primary_capacitance_f": 5e-11,
+        "load_capacitance_f": 1e-10,
+        "feedthrough_capacitance_f": 1e-12
+      },
+      "primary_current_a": {
+        "real": 0.01978191682356219,
+        "imaginary": -9.871726693125534e-05,
+        "peak_magnitude": 0.019782163135337934,
+        "phase_degrees": -0.2859195021628556
+      },
+      "pickup_current_a": {
+        "real": 2.8531560240220666e-09,
+        "imaginary": 1.7053475917315443e-10,
+        "peak_magnitude": 2.858247960114667e-09,
+        "phase_degrees": 3.420531912244966
+      },
+      "mean_core_magnetic_energy_j": 3.926463192011375e-10,
+      "mean_pickup_leakage_energy_j": 2.034198372468628e-23,
+      "mean_total_inductive_energy_j": 3.9264631920115785e-10,
+      "core_plus_leakage_minus_total_j": -5.169878828456423e-26,
+      "mean_explicit_capacitive_energy_j": 1.831647430471162e-15,
+      "mean_lumped_em_energy_scales": {
+        "energy_j": 3.926481508485883e-10,
+        "energy_mass_equivalent_kg": 4.368799870510314e-27,
+        "reference_distance_m": 1.0,
+        "point_mass_acceleration_scale_m_s2": 2.9158680975746987e-37
+      }
+    },
+    "one_joule_reference": {
+      "energy_j": 1.0,
+      "energy_mass_equivalent_kg": 1.1126500560536185e-17,
+      "reference_distance_m": 1.0,
+      "point_mass_acceleration_scale_m_s2": 7.4261602691186655e-28
+    },
+    "scope": "Assumed continuous air-core winding and lumped components. U/c^2 and the 1 m point-mass comparison are energy scales, not a conserved apparatus source or predicted accelerometer signal. Leads, supports, generator, heat and total energy transfer are not modeled. Internal battery-to-field energy transfer does not add total rest energy to an isolated device."
+  },
+  "ubt_source_snapshot": {
+    "repository": "UBT-Institute/unified-biquaternion-theory",
+    "commit": "fc4c6834b9f052a21a4054418024764ac046fa6e",
+    "files": [
+      {
+        "path": "canonical/ACTION.en.md",
+        "blob_sha": "5a063201f4a13f4f5cf37c77d6729b52ae4ca1a0",
+        "used_for": "Full unique microscopic action is not finalized; no G coupling inferred from an unspecified action."
+      },
+      {
+        "path": "canonical/gr_closure/gr_recovery_status.yaml",
+        "blob_sha": "84ccee77175689b2ace46b8fd08b8f01979bcb15",
+        "used_for": "Local classical gravity is marked CLOSED after adoption of its postulate; full action and microscopic source reduction remain OPEN."
+      },
+      {
+        "path": "canonical/gr_closure/gravity_dynamical_postulate.en.md",
+        "blob_sha": "0f6ff8693ba4557aaa8614c0ae5853e304f430ad",
+        "used_for": "One-coupling split-jet Palatini/HT local Einstein-Lambda branch. Its Lambda is integration data, not an identification with electromagnetic G."
+      },
+      {
+        "path": "canonical/CANONICAL_DEFINITIONS.md",
+        "blob_sha": "1b9e057d3f631fdbcce49bee9d6576e6f15cdcd6",
+        "used_for": "Central tetrad metric definition only; not endorsement of unrelated older representation claims."
+      },
+      {
+        "path": "canonical/interactions/qed.tex",
+        "blob_sha": "dc8683c29ca8f530b974a78eae31125bfc185230",
+        "used_for": "Declared effective U(1) and Maxwell photon term only; not a derived full composite-Theta reduction."
+      },
+      {
+        "path": "canonical/t_munu/step3_einstein_with_matter.tex",
+        "blob_sha": "ad9ab0205968cccde43936dacd813da4236ac3cf",
+        "used_for": "Independent-metric Hilbert variation with an inserted Einstein-Hilbert action; this does not derive a physical G source from a Theta-only action."
+      }
+    ],
+    "independently_verified_scope": "Read pinned source content and scope statements. The GR closure proofs/verifiers were not rerun here. No UBT action or metric was modified."
+  },
+  "not_claimed": [
+    "No proof that all UBT completions lack an additional physical scalar.",
+    "No gravitational G source or detector gain derived for this toroid.",
+    "No stability endorsement or independent verification of the cosmological extended-electromagnetism proposal.",
+    "No general continuum theorem proved by finite numerical samples or by Lean in this audit."
+  ]
+}

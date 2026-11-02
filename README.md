@@ -58,6 +58,19 @@ it does not add a scalar term or claim a finalized UBT action.
 python scripts/scalar_source_audit.py
 ```
 
+The [scalar/gravity audit](docs/scalar-gravity-audit.md) checks the proposed
+gravitational connection. A curved de Sitter example changes G while keeping
+the full Maxwell stress tensor unchanged. A separate SI calculation gives
+the toroid's magnetic and lumped circuit energy scales, with explicit limits
+on converting a field subsystem into an apparatus gravity prediction.
+The current UBT snapshot has a local classical Einstein-Lambda branch under
+an adopted dynamical postulate; its full microscopic action/source reduction
+and a physical G-to-metric response are not established by that result.
+
+```sh
+python scripts/gravity_audit.py
+```
+
 ## Finite-core A and UBT wave matching
 
 The [finite-core extension and UBT bridge](docs/ubt-wave-bridge.md) integrates
@@ -143,4 +156,3 @@ or end caps and is not a watertight printable solid. The trace is a numerical
 approximation to a curve perpendicular to the field, not a magnetic field
 line; increase `--steps-vertical` to reduce Euler integration error. Changing
 the horizontal resolution refines only the angular tessellation.
-
